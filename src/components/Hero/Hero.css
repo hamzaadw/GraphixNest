@@ -151,8 +151,11 @@
 }
 
 .hero-logo {
-  max-height: 300px; /* adjust size as needed */
+  height: 28vh; /* 40% of viewport height */
   width: auto;
   object-fit: contain;
-  margin-bottom: -50px;
+  margin-bottom: -70px;
+  image-rendering: -webkit-optimize-contrast; /* Chrome */
+  image-rendering: crisp-edges;               /* Firefox */
 }
+

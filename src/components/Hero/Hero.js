@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Hero.css";
-import logo from "../../configrations/logo.png"
+import logo from "../../configrations/logo2.png"
 
 import brush from "../../configrations/p-removebg-preview.png";
 import Doodle from "../../configrations/1189364_119485-OQGGJ9-856.jpg";
