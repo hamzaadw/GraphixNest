@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Hero.css";
+import logo from "../../configrations/logo.png"
 
 import brush from "../../configrations/p-removebg-preview.png";
 import Doodle from "../../configrations/1189364_119485-OQGGJ9-856.jpg";
@@ -35,17 +36,22 @@ const Hero = () => {
   }, [charIndex, isDeleting, phraseIndex]);
 
   return (
-    <section className="hero">
-      <img src={brush} alt="Brush Stroke" className="hero-brush" />
-      <img src={Doodle} alt="Graphic Doodle" className="hero-doodle" />
-      <h1>GraphixNest</h1>
-      <p>
-        Your Vision, <span className="typing">{displayText}</span>
-        <span className="cursor"></span>
-      </p>
-      <a href="#portfolio" className="btn">View My Work</a>
-    </section>
-  );
+  <section className="hero">
+    <img src={brush} alt="Brush Stroke" className="hero-brush" />
+    <img src={Doodle} alt="Graphic Doodle" className="hero-doodle" />
+
+    <h1 className="hero-heading">
+      <img src={logo} alt="GraphixNest Logo" className="hero-logo" />
+    </h1>
+
+    <p>
+      Your Vision, <span className="typing">{displayText}</span>
+      <span className="cursor"></span>
+    </p>
+
+    <a href="#portfolio" className="btn">View My Work</a>
+  </section>
+);
 };
 
 export default Hero;

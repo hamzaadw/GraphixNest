@@ -141,3 +141,18 @@
     left: -30px;
   }
 }
+
+
+.hero-heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.hero-logo {
+  max-height: 300px; /* adjust size as needed */
+  width: auto;
+  object-fit: contain;
+  margin-bottom: -50px;
+}
