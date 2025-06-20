@@ -154,7 +154,7 @@
   height: 28vh; /* 40% of viewport height */
   width: auto;
   object-fit: contain;
-  margin-bottom: -70px;
+  margin-bottom: -60px;
   image-rendering: -webkit-optimize-contrast; /* Chrome */
   image-rendering: crisp-edges;               /* Firefox */
 }
