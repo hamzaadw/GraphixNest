@@ -28,9 +28,9 @@ function Buss() {
     <h2 style={{ fontSize: '36px', color: '#2e7d32', fontFamily: `'Segoe UI', Roboto, sans-serif`, textAlign: 'center', marginBottom: '10px' }}>Business Cards</h2>
 <p style={{ fontSize: '16px', color: '#555', fontFamily: `'Segoe UI', Roboto, sans-serif`, textAlign: 'center', marginBottom: '40px' }}>Professionally crafted cards that leave a lasting impression.</p>
 
-    <div className="logo-gallery">
+    <div className="buss-gallery">
       {logoImages.map((src, index) => (
-        <div className="logo-card" key={index}>
+        <div className="buss-card" key={index}>
           <img className='image' src={src} alt={`Logo ${index + 1}`} />
         </div>
       ))}

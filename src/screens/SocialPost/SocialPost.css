@@ -1,4 +1,4 @@
-.logo-gallery {
+.so-gallery {
   display: grid;
   gap: 30px;
   justify-content: center;
@@ -9,7 +9,7 @@
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
-.logo-card {
+.so-card {
   display: flex;
   justify-content: center; /* horizontal centering */
   align-items: center;     /* vertical centering */
@@ -24,38 +24,38 @@
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
-.logo-card:hover {
+.so-card:hover {
   transform: scale(1.03);
   box-shadow:
     0 4px 8px rgba(133, 133, 133, 0.15),
     0 8px 24px rgba(116, 116, 116, 0.25);
 }
 
-.logo-card img {
+.so-card img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
 
-.logo-card img:hover {
+.so-card img:hover {
   filter: brightness(1.03) contrast(1.05);
 }
 
 /* ✅ Force exactly 3 cards per row on large screens */
 @media (min-width: 1024px) {
-  .logo-gallery {
+  .so-gallery {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .logo-card {
+  .so-card {
     width: 100%;
     max-width: none; /* Full width inside the grid */
     height: auto;
   }
 }
 
-.logo-card img {
+.so-card img {
   width: 250px;
   height: 250px;
   object-fit: cover;

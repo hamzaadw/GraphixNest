@@ -29,10 +29,10 @@ function Overlay() {
 <p style={{ fontSize: '16px', color: '#555', fontFamily: `'Segoe UI', Roboto, sans-serif`, textAlign: 'center', marginBottom: '40px' }}>Dynamic overlay designs for live streaming & gameplay.</p>
 
 
-    <div className="logo-gallery">
+    <div className="over-gallery">
         
       {videoURLs.map((src, index) => (
-        <div className="logo-card" key={index}>
+        <div className="over-card" key={index}>
           <video
             className="video-preview"
             src={src}

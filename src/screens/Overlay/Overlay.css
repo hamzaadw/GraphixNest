@@ -1,4 +1,4 @@
-.logo-gallery {
+.over-gallery {
   display: grid;
   gap: 30px;
   justify-content: center;
@@ -8,12 +8,12 @@
 }
 
 @media (min-width: 768px) {
-  .logo-gallery {
+  .over-gallery {
     grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
   }
 }
 
-.logo-card {
+.over-card {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -29,7 +29,7 @@
   margin: 0 auto;
 }
 
-.logo-card:hover {
+.over-card:hover {
   transform: scale(1.03);
   box-shadow:
     0 6px 10px rgba(133, 133, 133, 0.15),

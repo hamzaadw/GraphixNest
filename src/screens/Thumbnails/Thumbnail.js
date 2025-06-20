@@ -24,9 +24,9 @@ function Thumbnail() {
   }, []);
 
   return (
-    <div className="logo-gallery">
+    <div className="thumb-gallery">
       {logoImages.map((src, index) => (
-        <div className="logo-card" key={index}>
+        <div className="thumb-card" key={index}>
           <img className='image' src={src} alt={`Logo ${index + 1}`} />
         </div>
       ))}

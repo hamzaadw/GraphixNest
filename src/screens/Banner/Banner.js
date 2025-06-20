@@ -28,9 +28,9 @@ function Banner() {
     <h2 style={{ fontSize: '36px', color: '#2e7d32', fontFamily: `'Segoe UI', Roboto, sans-serif`, textAlign: 'center', marginBottom: '10px' }}>Banners</h2>
 <p style={{ fontSize: '16px', color: '#555', fontFamily: `'Segoe UI', Roboto, sans-serif`, textAlign: 'center', marginBottom: '40px' }}>Bold designs that grab attention online and offline.</p>
 
-    <div className="logo-gallery">
+    <div className="b-gallery">
       {logoImages.map((src, index) => (
-        <div className="logo-card" key={index}>
+        <div className="b-card" key={index}>
           <img className='image' src={src} alt={`Logo ${index + 1}`} />
         </div>
       ))}
