@@ -1,0 +1,52 @@
+.logo-gallery {
+  display: grid;
+  gap: 30px;
+  justify-content: center;
+  padding: 60px 40px;
+  background-color: #f9f9f9;
+
+  /* Default: Mobile first (1 column) */
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .logo-gallery {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+  }
+}
+
+.logo-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 700px;         /* Wider for thumbnail look */
+  height: 450px;            /* Fixed height as requested */
+  background-color: #ffffff;
+  overflow: hidden;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  margin: 0 auto;
+}
+
+.logo-card:hover {
+  transform: scale(1.03);
+  box-shadow:
+    0 4px 8px rgba(133, 133, 133, 0.15),
+    0 8px 24px rgba(116, 116, 116, 0.25);
+}
+
+.logo-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;     /* Ensures image scales inside card */
+  display: block;
+  transition: filter 0.3s ease;
+}
+
+.logo-card img:hover {
+  filter: brightness(1.05) contrast(1.1);
+}

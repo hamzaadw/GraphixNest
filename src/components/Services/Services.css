@@ -1,0 +1,37 @@
+.services {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+.service-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.service-list .service-item {
+  padding: 18px 30px;
+  background: #e7f5ec;
+  border-radius: 12px;
+  font-weight: 500;
+  font-size: 1.1rem;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.service-list .service-item:hover {
+  transform: translateY(-8px) scale(1.2);
+  background: #c8ebd8;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  color: #222;
+  
+}

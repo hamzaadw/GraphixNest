@@ -1,0 +1,37 @@
+import React, { useEffect, useState } from 'react';
+import './Thumbnail.css';
+import { collection, query, where, onSnapshot } from 'firebase/firestore';
+import { db } from '../../configrations/Firebase';
+
+function Thumbnail() {
+  const [logoImages, setLogoImages] = useState([]);
+
+  useEffect(() => {
+    const q = query(collection(db, 'Projects'), where('category', '==', 'Thumbnail'));
+
+    const unsubscribe = onSnapshot(q, (querySnapshot) => {
+      const logos = [];
+      querySnapshot.forEach((doc) => {
+        const data = doc.data();
+        if (data.image) {
+          logos.push(data.image); // Make sure your Firestore documents have an 'image' field
+        }
+      });
+      setLogoImages(logos);
+    });
+
+    return () => unsubscribe(); // Cleanup listener
+  }, []);
+
+  return (
+    <div className="logo-gallery">
+      {logoImages.map((src, index) => (
+        <div className="logo-card" key={index}>
+          <img className='image' src={src} alt={`Logo ${index + 1}`} />
+        </div>
+      ))}
+    </div>
+  );
+}
+
+export default Thumbnail;
