@@ -11,13 +11,14 @@
 }
 
 .portfolio-item {
+  position: relative;
   text-decoration: none;
   color: inherit;
   transition: transform 0.3s ease;
 }
 
 .portfolio-item:hover {
-  transform: scale(1.05);
+  transform: scale(1.07);
 }
 
 .portfolio-item img {
@@ -25,11 +26,60 @@
   height: 180px;
   border-radius: 50%;
   object-fit: cover;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1; /* Image below stroke */
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+  transition: box-shadow 0.4s ease;
 }
+
+/* 🔥 Stroke above the image using ::after */
+.portfolio-item::after {
+  content: "";
+  position: absolute;
+  top: 4px;   /* adjust for displacement */
+  left: 6px;
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  border: 4px solid rgba(255, 255, 255, 0.75);
+  z-index: 2; /* Above the image */
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.portfolio-item::after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 6px;
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  border: 4px solid rgba(255, 255, 255, 0.75);
+  z-index: 2;
+  pointer-events: none;
+
+  /* 🔁 Randomized float animation */
+  animation: floatRandom 6s ease-in-out infinite;
+}
+
+
 
 .portfolio-item p {
   margin-top: 10px;
   font-weight: 600;
   font-size: 16px;
 }
+
+
+
+
+@keyframes floatRandom {
+  0%   { transform: translate(0px, 0px) rotate(0deg); }
+  20%  { transform: translate(3px, -2px) rotate(1deg); }
+  40%  { transform: translate(-2px, 3px) rotate(-1deg); }
+  60%  { transform: translate(2px, 2px) rotate(1deg); }
+  80%  { transform: translate(-3px, -1px) rotate(-2deg); }
+  100% { transform: translate(0px, 0px) rotate(0deg); }
+}
+

@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "./Hero.css";
-import logo from "../../configrations/logo2.png"
+import logo from "../../configrations/logo3.png"
 
 import brush from "../../configrations/p-removebg-preview.png";
-import Doodle from "../../configrations/1189364_119485-OQGGJ9-856.jpg";
+import Doodle from "../../configrations/ddd.png";
 
 const Hero = () => {
   const phrases = ["Our Pixels", "Our Illustration"];

@@ -7,12 +7,12 @@ import { useEffect } from "react";
 
 const Portfolio = () => {
   const items = [
-    { path: "/logos", text: "Logo+Design", label: "Creative Logo Design", bg: "000" },
-    { path: "/socialpost", text: "Social+Post", label: "Social Media Graphics", bg: "222" },
+    { path: "/logos", text: "Logo+Design", label: "Creative Logo Design", bg: "333" },
+    { path: "/socialpost", text: "Social+Post", label: "Social Media Graphics", bg: "333" },
     { path: "/thumbnail", text: "Thumbnail", label: "YouTube Thumbnails", bg: "333" },
-    { path: "/overlay", text: "Overlay+Design", label: "Stream Overlay", bg: "444" },
-    { path: "/Business", text: "Business+Card", label: "Business Card Design", bg: "555" },
-    { path: "/banner", text: "Banner+Design", label: "Web Banner", bg: "666" },
+    { path: "/overlay", text: "Overlay+Design", label: "Stream Overlay", bg: "333" },
+    { path: "/Business", text: "Business+Card", label: "Business Card Design", bg: "333" },
+    { path: "/banner", text: "Banner+Design", label: "Web Banner", bg: "333" },
   ];
 
 

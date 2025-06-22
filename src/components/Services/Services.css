@@ -28,10 +28,29 @@ h2 {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
 
-.service-list .service-item:hover {
+/* .service-list .service-item:hover {
   transform: translateY(-8px) scale(1.2);
   background: #c8ebd8;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
   color: #222;
   
+} */
+
+.service-list .service-item {
+  /* ...existing styles... */
+  border: none; /* Remove normal border */
+  box-shadow:
+    3px 3px 0 rgba(46, 125, 50, 0.5), /* Displaced stroke effect */
+    0 4px 10px rgba(0, 0, 0, 0.08); /* Existing soft shadow */
+}
+
+
+/* Hover effect with stronger stroke and glow */
+.service-list .service-item:hover {
+  transform: translateY(-8px) scale(1.2);
+  background: #76b191;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15), 
+              0 0 12px rgba(46, 125, 50, 0.3); /* Green glow stroke */
+  color: #222;
+  border-color: rgba(46, 125, 50, 0.6); /* Slightly stronger stroke on hover */
 }
