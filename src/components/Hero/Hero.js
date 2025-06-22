@@ -36,7 +36,7 @@ const Hero = () => {
   }, [charIndex, isDeleting, phraseIndex]);
 
   return (
-  <section className="hero">
+  <section id="home" className="hero">
     <img src={brush} alt="Brush Stroke" className="hero-brush" />
     <img src={Doodle} alt="Graphic Doodle" className="hero-doodle" />
 

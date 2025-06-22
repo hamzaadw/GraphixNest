@@ -1,13 +1,26 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.home-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #666;
+  color: white;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
+  padding-right: 1px;
+  padding-bottom: 1px;
+    border: solid 2px green;
 }
 
-body {
-  font-family: 'Poppins', sans-serif;
-  color: #333;
-  background: #fff;
-  scroll-behavior: smooth;
-  line-height: 1.6;
+.home-icon:hover {
+  transform: scale(1.1);
+
 }

@@ -37,7 +37,7 @@ const Contact = () => {
           title: "Message Sent!",
           text: "Your message has been successfully delivered.",
           icon: "success",
-          confirmButtonColor: "#2e7d32"
+          confirmButtonColor: "#2e7d32",
         });
       })
       .catch((error) => {
@@ -48,37 +48,55 @@ const Contact = () => {
           title: "Oops!",
           text: "Something went wrong. Please try again.",
           icon: "error",
-          confirmButtonColor: "#d33"
+          confirmButtonColor: "#d33",
         });
       });
   };
 
   return (
-    <section className="contact" id="contact">
-      <h2>Contact Us</h2>
-      <p className="contact-subtext">
-        Have a question or project in mind? We'd love to hear from you.
-      </p>
+    <section className="contact-wrapper">
+      {/* Decorative Circles */}
+      <div className="circle circle1"></div>
+      <div className="circle circle2"></div>
+      <div className="circle circle3"></div>
+      <div className="circle circle4"></div>
+      <div className="circle circle5"></div>
 
-      <form ref={form} onSubmit={sendEmail}>
-        <input type="text" name="name" placeholder="Full Name" required />
-        <input type="email" name="email" placeholder="Your Email" required />
-        <textarea name="message" placeholder="Your Message" rows="5" required />
-        <input type="hidden" name="time" value={new Date().toLocaleString()} />
+      <section className="contact" id="contact">
+        <h2>Contact Us</h2>
+        <p className="contact-subtext">
+          Have a question or project in mind? We'd love to hear from you.
+        </p>
 
-        <button type="submit" disabled={isLoading}>
-          {isLoading ? <ClipLoader size={20} color="#fff" /> : "Send Message"}
-        </button>
-      </form>
+        <form ref={form} onSubmit={sendEmail}>
+          <input type="text" name="name" placeholder="Full Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <textarea
+            name="message"
+            placeholder="Your Message"
+            rows="5"
+            required
+          />
+          <input
+            type="hidden"
+            name="time"
+            value={new Date().toLocaleString()}
+          />
 
-      <a
-        href="https://wa.me/+923390084207"
-        className="whatsapp-btn"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <i className="fab fa-whatsapp"></i> Chat on WhatsApp
-      </a>
+          <button type="submit" disabled={isLoading}>
+            {isLoading ? <ClipLoader size={20} color="#fff" /> : "Send Message"}
+          </button>
+        </form>
+
+        <a
+          href="https://wa.me/+923390084207"
+          className="whatsapp-btn"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i className="fab fa-whatsapp"></i> Chat on WhatsApp
+        </a>
+      </section>
     </section>
   );
 };

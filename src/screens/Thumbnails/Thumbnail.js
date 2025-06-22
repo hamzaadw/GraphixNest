@@ -24,6 +24,31 @@ function Thumbnail() {
   }, []);
 
   return (
+    <>
+    <h2
+  style={{
+    fontSize: '36px',
+    color: '#2e7d32',
+    fontFamily: `'Segoe UI', Roboto, sans-serif`,
+    textAlign: 'center',
+    marginBottom: '10px'
+  }}
+>
+  Thumbnails
+</h2>
+
+<p
+  style={{
+    fontSize: '16px',
+    color: '#555',
+    fontFamily: `'Segoe UI', Roboto, sans-serif`,
+    textAlign: 'center',
+    marginBottom: '40px'
+  }}
+>
+  Eye-catching thumbnails that boost clicks and capture attention.
+</p>
+
     <div className="thumb-gallery">
       {logoImages.map((src, index) => (
         <div className="thumb-card" key={index}>
@@ -31,6 +56,7 @@ function Thumbnail() {
         </div>
       ))}
     </div>
+    </>
   );
 }
 

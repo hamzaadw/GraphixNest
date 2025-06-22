@@ -4,7 +4,7 @@ import Admin from './Admin'
 
 export default function AdminPanel() {
 
-    const pass = '221'
+    const pass = '122'
     const [access, setaccess] = useState("")
     const [code, setcode] = useState("")
 
