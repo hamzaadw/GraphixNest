@@ -12,6 +12,7 @@ import Banner from './screens/Banner/Banner.js';
 import Buss from './screens/Buss/Buss.js';
 import SocialPost from './screens/SocialPost/SocialPost.js';
 import Overlay from './screens/Overlay/Overlay.js';
+import AdminPage from './components/adminPannel/AdminPage.js';
 import { FaHome } from 'react-icons/fa';
 import './App.css';
 
@@ -39,6 +40,8 @@ function App() {
 
         <Routes>
           {/* Admin routes */}
+
+          {/* <Route path="/adminpanel" element={<AdminPanel />} /> */}
           <Route path="/adminpanel" element={<AdminPanel />} />
           <Route path="/logos" element={<Logo />} />
           <Route path="/thumbnail" element={<Thumbnail />} />
@@ -46,6 +49,9 @@ function App() {
           <Route path="/socialpost" element={<SocialPost />} />
           <Route path="/Business" element={<Buss />} />
           <Route path="/Overlay" element={<Overlay />} />
+
+
+          
 
           {/* Main Website Route */}
           <Route

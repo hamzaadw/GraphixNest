@@ -1,52 +1,36 @@
-import React from 'react'
-import { useState } from 'react'
-import Admin from './Admin'
+import React, { useState } from 'react';
+import AdminPage from './AdminPage';
 
 export default function AdminPanel() {
+  const pass = '122';
+  const [access, setAccess] = useState(false);
+  const [code, setCode] = useState('');
 
-    const pass = '122'
-    const [access, setaccess] = useState("")
-    const [code, setcode] = useState("")
-
-    const handleSubmit = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     if (code === pass) {
-      setaccess(true);
+      setAccess(true);
     } else {
       alert('Incorrect code!');
     }
   };
 
-  if(!access){
-    return(
-        <div style={{ textAlign: 'center', marginTop: '100px' }}>
+  if (!access) {
+    return (
+      <div style={{ textAlign: 'center', marginTop: '100px' }}>
         <h2>Enter Admin Access Code</h2>
         <form onSubmit={handleSubmit}>
           <input
             type="password"
             value={code}
-            onChange={(e) => setcode(e.target.value)}
+            onChange={(e) => setCode(e.target.value)}
             placeholder="Access Code"
           />
           <button type="submit">Done</button>
         </form>
       </div>
-    )
+    );
   }
 
-
-
-
-  return (
-    <div>
-
-    <Admin/>
-        
-
-
-
-
-
-    </div>
-  )
+  return <AdminPage />;
 }

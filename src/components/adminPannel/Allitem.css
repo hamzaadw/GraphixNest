@@ -1,0 +1,39 @@
+/* Wrap for image + button */
+.card-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Delete button styles */
+.permanent-delete-btn {
+  margin-top: 12px;
+  padding: 10px 24px;
+  background-color: #d9534f;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.permanent-delete-btn:hover {
+  background-color: #c9302c;
+}
+.so-card {
+  width: 350px !important;
+  height: 400px !important;
+}
+/* Hover effect stays the same */
+
+
+/* Optional: enhance the image fit */
+.so-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: filter 0.3s ease;
+}
+
