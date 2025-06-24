@@ -4,7 +4,7 @@ import "./Footer.css";
 const Footer = () => {
   return (
     <footer>
-      © 2025 GraphixNest. All Rights Reserved.
+      © 2025 Grafentix. All Rights Reserved.
     </footer>
   );
 };
