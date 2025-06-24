@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./Hero.css";
-import logo from "../../configrations/logo3.png"
 
+import logo from "../../configrations/logo3.png";
 import brush from "../../configrations/p-removebg-preview.png";
 import Doodle from "../../configrations/ddd.png";
 
@@ -36,22 +36,25 @@ const Hero = () => {
   }, [charIndex, isDeleting, phraseIndex]);
 
   return (
-  <section id="home" className="hero">
-    <img src={brush} alt="Brush Stroke" className="hero-brush" />
-    <img src={Doodle} alt="Graphic Doodle" className="hero-doodle" />
+    <section id="home" className="hero">
+      <img src={brush} alt="Brush Stroke" className="hero-brush" />
+      <img src={Doodle} alt="Graphic Doodle" className="hero-doodle" />
 
-    <h1 className="hero-heading">
-      <img src={logo} alt="GraphixNest Logo" className="hero-logo" />
-    </h1>
+      <div className="hero-logo-wrapper">
+        <div className="logo-ring"></div>
+        <img src={logo} alt="Grafentix Logo" className="hero-logo" />
+      </div>
 
-    <p>
-      Your Vision, <span className="typing">{displayText}</span>
-      <span className="cursor"></span>
-    </p>
+      <h2 className="hero-subheading">Design Beyond Imagination</h2>
 
-    <a href="#portfolio" className="btn">View My Work</a>
-  </section>
-);
+      <p>
+        Your Vision, <span className="typing">{displayText}</span>
+        <span className="cursor"></span>
+      </p>
+
+      <a href="#portfolio" className="btn">View My Work</a>
+    </section>
+  );
 };
 
 export default Hero;
