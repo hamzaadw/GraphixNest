@@ -89,7 +89,7 @@ const Contact = () => {
         </form>
 
         <a
-          href="https://wa.me/+923390084207"
+          href="https://wa.me/+923148313496"
           className="whatsapp-btn"
           target="_blank"
           rel="noopener noreferrer"
